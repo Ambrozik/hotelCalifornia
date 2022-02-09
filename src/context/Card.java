@@ -5,6 +5,7 @@ public class Card {
 
     public Card(int id) {
         this.id = id;
+
     }
 
     public int getId() {
