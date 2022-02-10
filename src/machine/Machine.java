@@ -10,14 +10,14 @@ public class Machine {
     private EnsCard ensCard;
 
     public Machine() {
+        ensCard = new EnsCard();
     }
 
-    public void programCard(int cardId, int roomId) {
-
+    public void programCard(int cardId, String roomId) {
+        ensCard.getCard(cardId).setIdRoom(roomId);
     }
 
     public void reprogramCard(int cardId, int roomId) {
-
     }
 
     public void cancelCard(int cardId) {

@@ -13,6 +13,7 @@ public class EnsCard {
 
     public EnsCard() {
         usefullCards = new ArrayList<>();
+        lostCards = new ArrayList<>();
     }
 
     public Card getCard(int cardId) {

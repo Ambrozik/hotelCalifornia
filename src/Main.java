@@ -75,7 +75,7 @@ public class Main {
     public static void bookRoom() {
         System.out.println("Entrez le numéro de chambre à réserver");
         System.out.println("Réponse : ");
-        int roomId = Integer.parseInt(in.nextLine());
+        String roomId = in.nextLine();
         System.out.println("Entrez votre nom");
         System.out.println("Réponse : ");
         String nom = in.nextLine();
@@ -90,7 +90,7 @@ public class Main {
         int cardId = Integer.parseInt(in.nextLine());
         System.out.println("Entrez le numéro de chambre à affecter à la carte");
         System.out.println("Réponse : ");
-        int roomId = Integer.parseInt(in.nextLine());
+        String roomId = in.nextLine();
         machine.programCard(cardId, roomId);
 
         System.out.println("Le numéro de chambre " + roomId + " a bien été affecté à la carte " + cardId + ".");
@@ -102,7 +102,7 @@ public class Main {
         int cardId = Integer.parseInt(in.nextLine());
         System.out.println("Entrez le numéro de chambre à affecter à la carte");
         System.out.println("Réponse : ");
-        int roomId = Integer.parseInt(in.nextLine());
+        String roomId = in.nextLine();
         machine.reprogramCard(cardId, roomId);
 
         System.out.println("Le numéro de chambre " + roomId + " a bien été affecté à la carte " + cardId + ".");
