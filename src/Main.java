@@ -1,8 +1,11 @@
+import machine.Machine;
+
 import java.util.Scanner;
 
 public class Main {
 
     private static final Scanner in = new Scanner(System.in);
+    private static final Machine machine = new Machine();
 
     public static void main(String[] args) {
 
@@ -54,48 +57,63 @@ public class Main {
     public static void looseCard() {
         System.out.println("Entrez le numéro de la carte perdue.");
         System.out.println("Réponse : ");
-        int number = Integer.parseInt(in.nextLine());
+        int cardId = Integer.parseInt(in.nextLine());
+        machine.looseCard(cardId);
 
-        System.out.println("La carte " + number + " est maintenant notée comme perdue.");
+        System.out.println("La carte " + cardId + " est maintenant notée comme perdue.");
     }
 
     public static void unbookRoom() {
         System.out.println("Entrez le numéro de chambre à rendre.");
         System.out.println("Réponse : ");
-        int number = Integer.parseInt(in.nextLine());
+        int roomId = Integer.parseInt(in.nextLine());
+        machine.unbookRoom(roomId);
 
-        System.out.println("La chambre " + number + " a bien été rendue.");
+        System.out.println("La chambre " + roomId + " a bien été rendue.");
     }
 
     public static void bookRoom() {
         System.out.println("Entrez le numéro de chambre à réserver");
         System.out.println("Réponse : ");
-        int number = Integer.parseInt(in.nextLine());
+        int roomId = Integer.parseInt(in.nextLine());
         System.out.println("Entrez votre nom");
         System.out.println("Réponse : ");
         String nom = in.nextLine();
+        machine.bookRoom(roomId, nom);
 
-        System.out.println("La chambre " + number + " est maintenant occupée par " + nom + ".");
+        System.out.println("La chambre " + roomId + " est maintenant occupée par " + nom + ".");
     }
 
     public static void programCard() {
+        System.out.println("Entrez le numéro de carte à programmer");
+        System.out.println("Réponse : ");
+        int cardId = Integer.parseInt(in.nextLine());
         System.out.println("Entrez le numéro de chambre à affecter à la carte");
         System.out.println("Réponse : ");
-        int number = Integer.parseInt(in.nextLine());
-        System.out.println("Le numéro de chambre " + number + " a bien été affecté à la carte.");
+        int roomId = Integer.parseInt(in.nextLine());
+        machine.programCard(cardId, roomId);
+
+        System.out.println("Le numéro de chambre " + roomId + " a bien été affecté à la carte " + cardId + ".");
     }
 
     public static void reprogramCard() {
-        System.out.println("Entrez le numéro de la carte à reprogrammer");
+        System.out.println("Entrez le numéro de carte à reprogrammer");
         System.out.println("Réponse : ");
-        int number = Integer.parseInt(in.nextLine());
-        System.out.println("La carte a bien été programmée.");
+        int cardId = Integer.parseInt(in.nextLine());
+        System.out.println("Entrez le numéro de chambre à affecter à la carte");
+        System.out.println("Réponse : ");
+        int roomId = Integer.parseInt(in.nextLine());
+        machine.reprogramCard(cardId, roomId);
+
+        System.out.println("Le numéro de chambre " + roomId + " a bien été affecté à la carte " + cardId + ".");
     }
 
     public static void cancelCard() {
         System.out.println("Entrez le numéro de la carte à annuler");
         System.out.println("Réponse : ");
-        int number = Integer.parseInt(in.nextLine());
-        System.out.println("La carte a bien été annulée.");
+        int cardId = Integer.parseInt(in.nextLine());
+        machine.cancelCard(cardId);
+
+        System.out.println("La carte " + cardId + " a bien été annulée.");
     }
 }

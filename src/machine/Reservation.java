@@ -1,4 +1,4 @@
-package machine.variable;
+package machine;
 
 import context.Card;
 

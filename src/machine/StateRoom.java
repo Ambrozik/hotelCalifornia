@@ -1,4 +1,4 @@
-package machine.variable;
+package machine;
 
 public enum StateRoom {
     available,
