@@ -1,10 +1,9 @@
 package context;
 
-import java.util.Objects;
-
 public class Card {
-    int idCard;
-    String idRoom;
+
+    private int idCard;
+    private String idRoom;
 
     /**
      * Constructor for class Card
