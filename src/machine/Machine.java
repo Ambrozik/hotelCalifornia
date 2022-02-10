@@ -1,16 +1,19 @@
 package machine;
 
+import context.EnsCard;
+
 /**
  * @author Clément Colné
  */
 public class Machine {
 
-    public Machine() {
+    private EnsCard ensCard;
 
+    public Machine() {
     }
 
     public void programCard(int cardId, int roomId) {
-        
+
     }
 
     public void reprogramCard(int cardId, int roomId) {

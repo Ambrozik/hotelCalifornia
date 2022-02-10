@@ -18,7 +18,7 @@ public class EnsCard {
     public Card getCard(int cardId) {
         Card card = null;
         for(Card c : usefullCards) {
-            if(c.getId() == cardId) {
+            if(c.getIdCard() == cardId) {
                 card = c;
             }
         }
@@ -27,7 +27,7 @@ public class EnsCard {
 
     public void setLost(int cardId) {
         for(Card c : usefullCards) {
-            if(c.getId() == cardId) {
+            if(c.getIdCard() == cardId) {
                 lostCards.add(c);
                 usefullCards.remove(c);
             }
